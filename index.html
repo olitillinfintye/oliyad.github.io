@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
@@ -93,7 +94,7 @@
                       <!--https://user-images.githubusercontent.com/64665268/206637986-70027e06-22cd-4aa1-aeb3-963308b2c99b.gif-->
                       <!--images/undraw/undraw_software_engineer_lvl5.svg-->
                         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_rRHO95QOkl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+<lottie-player id="firstLottie" src="https://assets8.lottiefiles.com/packages/lf20_rRHO95QOkl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
                     </div>
                 </div>
 
@@ -381,6 +382,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <script>
       var nextStep = document.querySelector('#nextStep');
     
@@ -393,6 +395,20 @@
         document.getElementById('thank_you').style.display = 'block';
       });
     </script>
+          
+    <script>
+LottieInteractivity.create({
+    player: '#firstLottie',
+    mode: 'scroll',
+    actions: [
+        {
+            visibility[0,1],
+            type: 'seek',
+            frames: [0, 300],
+        },
+    ]
+});
+</script>
 
   </body>
 </html>
